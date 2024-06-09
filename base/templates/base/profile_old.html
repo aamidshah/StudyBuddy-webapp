@@ -1,0 +1,27 @@
+{% extends "main.html" %}
+
+
+{% block content %}
+
+<main class="layout layout--3">
+  <div class="container">
+    <!-- Topics Start -->
+    {% include "base/topics_component.html" %}
+    <!-- Topics End -->
+
+    <!-- Profile Content Start -->
+    <div class="profile-content">
+      <h1>{{ user.username }}</h1>
+      {% include "base/feed_component.html" %}
+    </div>
+    <!-- Profile Content End -->
+
+    <!-- Activities Start -->
+    <div class="activities">
+      {% include "base/activity_component.html" %}
+    </div>
+    <!-- Activities End -->
+  </div>
+</main>
+
+{% endblock %}
